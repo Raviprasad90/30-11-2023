@@ -1,0 +1,25 @@
+https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-8.9.2.46101.zip
+
+/usr/lib/jvm/java-11-openjdk-11.0.20.0.8-1.amzn2.0.1.x86_64
+
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.20.0.8-1.amzn2.0.1.x86_64
+export PATH=$JAVA_HOME/bin:$PATH
+
+
+database-1.cvioexpirbgw.eu-north-1.rds.amazonaws.com
+database-2.cvioexpirbgw.eu-north-1.rds.amazonaws.com
+
+CREATE DATABASE sonarqube CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+CREATE USER sonarqube@localhost IDENTIFIED BY 'sonarqube'
+
+CREATE USER sonarqube@'%' IDENTIFIED BY 'sonarqube'
+
+GRANT ALL ON sonarqube." TO sonarqube@localhost;
+
+GRANT ALL ON sonarqube." TO sonarqube@'%';
+
+
+
+
+
